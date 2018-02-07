@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>background-size</title>
+    <link rel="stylesheet" href="common.css">
+    <style type="text/css">
+    div {
+        background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517926972667&di=bf0bff2f9d6b28b32a7a790ddd131464&imgtype=0&src=http%3A%2F%2Ff.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F503d269759ee3d6db032f61b48166d224e4ade6e.jpg') no-repeat;
+        background-size: 100% 100%;
+    }
+    /*transition*/
+
+    .transition-class {
+        transition-property: background-size;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .transition-class:hover {
+        background-size: 200% 200%;
+    }
+    /*animation*/
+
+    @keyframes background-size {
+        to {
+            background-size: 200% 200%;
+        }
+    }
+
+    .animation-class:hover {
+        animation-name: background-size;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="transition-class">transition</div>
+    <div class="animation-class">animation</div>
+</body>
+
+</html>

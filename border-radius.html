@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>border-radius</title>
+    <link rel="stylesheet" href="common.css">
+    <style type="text/css">
+    div {
+        background: slategray;
+    }
+    /*transition*/
+
+    .transition-class {
+        transition-property: border-radius;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .transition-class:hover {
+        border-radius: 50% 0;
+    }
+    /*animation*/
+
+    @keyframes border-radius {
+        to {
+            border-radius: 50% 0;
+        }
+    }
+
+    .animation-class:hover {
+        animation-name: border-radius;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="transition-class">transition</div>
+    <div class="animation-class">animation</div>
+</body>
+
+</html>

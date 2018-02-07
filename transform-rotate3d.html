@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>transform-rotate3d</title>
+    <link rel="stylesheet" href="common.css">
+    <style type="text/css">
+    div {
+        background: slategray;
+        position: relative;
+        transform: rotate3d(0, 0, 0, 0deg)
+    }
+    /*transition*/
+
+    .transition-class {
+        transition-property: transform;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .transition-class:hover {
+        transform: rotate3d(1, 1, 1, 360deg)
+    }
+    /*animation*/
+
+    @keyframes transform-rotate3d {
+        to {
+            transform: rotate3d(1, 1, 1, 360deg)
+        }
+    }
+
+    .animation-class:hover {
+        animation-name: transform-rotate3d;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="transition-class">transition</div>
+    <div class="animation-class">animation</div>
+</body>
+
+</html>

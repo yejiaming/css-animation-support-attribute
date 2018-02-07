@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>line-height</title>
+    <link rel="stylesheet" href="common.css">
+    <style type="text/css">
+    div {
+        background: slategray;
+    }
+    /*transition*/
+
+    .transition-class {
+        transition-property: line-height;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .transition-class:hover {
+        line-height: 100px;
+    }
+    /*animation*/
+
+    @keyframes line-height {
+        to {
+            line-height: 100px;
+        }
+    }
+
+    .animation-class:hover {
+        animation-name: line-height;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="transition-class">transition</div>
+    <div class="animation-class">animation</div>
+</body>
+
+</html>

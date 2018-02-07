@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>font-size</title>
+    <link rel="stylesheet" href="common.css">
+    <style type="text/css">
+    div {
+        background: slategray;
+    }
+    /*transition*/
+
+    .transition-class {
+        transition-property: font-size;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .transition-class:hover {
+        font-size: 30px;
+    }
+    /*animation*/
+
+    @keyframes font-size {
+        to {
+            font-size: 30px;
+        }
+    }
+
+    .animation-class:hover {
+        animation-name: font-size;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="transition-class">transition</div>
+    <div class="animation-class">animation</div>
+</body>
+
+</html>

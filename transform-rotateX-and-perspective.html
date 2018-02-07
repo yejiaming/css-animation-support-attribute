@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>transform-rotateX-and-perspective</title>
+    <link rel="stylesheet" href="common.css">
+    <style type="text/css">
+    div {
+        background: slategray;
+        position: relative;
+        transform: perspective(400px) rotateX(0deg);
+    }
+    /*transition*/
+
+    .transition-class {
+        transition-property: transform;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .transition-class:hover {
+        transform: perspective(400px)  rotateX(360deg);
+    }
+    /*animation*/
+
+    @keyframes transform-rotateX-and-perspective {
+        to {
+            transform: perspective(400px)  rotateX(360deg);
+        }
+    }
+
+    .animation-class:hover {
+        animation-name: transform-rotateX-and-perspective;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="transition-class">transition</div>
+    <div class="animation-class">animation</div>
+</body>
+
+</html>

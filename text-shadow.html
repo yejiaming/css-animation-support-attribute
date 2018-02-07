@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>text-shadow</title>
+    <link rel="stylesheet" href="common.css">
+    <style type="text/css">
+    div {
+        background: slategray;
+        text-shadow: 0 0 black;
+    }
+    /*transition*/
+
+    .transition-class {
+        transition-property: text-shadow;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .transition-class:hover {
+        text-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+    }
+    /*animation*/
+
+    @keyframes text-shadow {
+        to {
+            text-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+        }
+    }
+
+    .animation-class:hover {
+        animation-name: text-shadow;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="transition-class">transition</div>
+    <div class="animation-class">animation</div>
+</body>
+
+</html>

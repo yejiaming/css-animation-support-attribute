@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>background-color</title>
+    <link rel="stylesheet" href="common.css">
+    <style type="text/css">
+    div {
+        background: slategray;
+    }
+    /*transition*/
+
+    .transition-class {
+        /*相当于：transition: background-color 0.5s ease-in-out;*/
+        transition-property: background-color;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .transition-class:hover {
+        background: red;
+    }
+    /*animation*/
+
+    @keyframes background-color {
+        to {
+            background: red;
+        }
+    }
+
+    .animation-class:hover {
+        /*相当于：animation: background-color 0.5s ease-in-out forwards;*/
+        animation-name: background-color;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="transition-class">transition</div>
+    <div class="animation-class">animation</div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>letter-spacing</title>
+    <link rel="stylesheet" href="common.css">
+    <style type="text/css">
+    div {
+        background: slategray;
+    }
+    /*transition*/
+
+    .transition-class {
+        transition-property: letter-spacing;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .transition-class:hover {
+        letter-spacing: 10px;
+    }
+    /*animation*/
+
+    @keyframes letter-spacing {
+        to {
+            letter-spacing: 10px;
+        }
+    }
+
+    .animation-class:hover {
+        animation-name: letter-spacing;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="transition-class">transition</div>
+    <div class="animation-class">animation</div>
+</body>
+
+</html>

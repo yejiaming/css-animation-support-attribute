@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    margin: 100px auto;
+    width: 200px;
+    text-align: center;
+    height: 200px;
+    line-height: 200px;
+    color: #fff;
+    font-size: 20px;
+}

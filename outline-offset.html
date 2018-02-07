@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>outline-offset</title>
+    <link rel="stylesheet" href="common.css">
+    <style type="text/css">
+    div {
+        background: slategray;
+        outline-color: red;
+        outline-style: solid;
+        outline-width: 2px;
+    }
+    /*transition*/
+
+    .transition-class {
+        transition-property: outline-offset;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+
+    .transition-class:hover {
+        outline-offset: 30px;
+    }
+    /*animation*/
+
+    @keyframes outline-offset {
+        to {
+            outline-offset: 30px;
+        }
+    }
+
+    .animation-class:hover {
+        animation-name: outline-offset;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="transition-class">transition</div>
+    <div class="animation-class">animation</div>
+</body>
+
+</html>
